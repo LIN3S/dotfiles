@@ -6,8 +6,6 @@ if ! brew -v &> /dev/null; then
   echo "Done!"
 fi
 
-# Install command-line tools using Homebrew.
-
 # Ask for the administrator password upfront.
 sudo -v
 
@@ -47,6 +45,8 @@ brew install homebrew/dupes/screen
 brew install homebrew/php/php55 --with-gmp
 
 # Install casks
+brew tap caskroom/versions
+
 brew install caskroom/cask/brew-cask
 brew install Caskroom/cask/java
 
@@ -62,7 +62,7 @@ brew cask install moom
 brew cask install phpstorm
 brew cask install robomongo
 brew cask install sequel-pro
-brew cask install sublime-text && cp -rf ~/init/SublimeText/* ~/Library/Application\ Support/Sublime\ Text\ 3/
+brew cask install sublime-text3 && cp -rf ~/init/SublimeText/* ~/Library/Application\ Support/Sublime\ Text\ 3/
 brew cask install tower
 brew cask install virtualbox
 brew cask install vagrant
@@ -103,7 +103,6 @@ brew install xz
 
 # Install PHP 5.6 with Xdebug.
 brew tap homebrew/dupes
-brew tap homebrew/versions
 brew tap homebrew/homebrew-php
 brew install php56
 brew install php56-xdebug
