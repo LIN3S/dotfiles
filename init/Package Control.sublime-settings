@@ -1,0 +1,18 @@
+{
+	"installed_packages":
+	[
+		"Alignment",
+		"AutomaticFullscreen",
+		"BracketHighlighter",
+		"CodeFormatter",
+		"DocBlockr",
+		"Gherkin (Cucumber) Formatter",
+		"GitGutter",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"PHP-Twig",
+		"Sass",
+		"SideBarEnhancements",
+		"Theme - Flatland"
+	]
+}

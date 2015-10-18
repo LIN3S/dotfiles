@@ -35,12 +35,6 @@ brew install bash-completion2
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
-
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
@@ -80,20 +74,32 @@ brew install ucspi-tcp # `tcpserver` etc.
 brew install xpdf
 brew install xz
 
+# Install PHP 5.6 with Xdebug.
+brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap homebrew/homebrew-php
+brew install php56
+brew install php56-xdebug
+
 # Install other useful binaries.
 brew install ack
+brew install ansible
+brew install boot2docker
 brew install dark-mode
-#brew install exiv2
+brew install docker
+brew install composer
 brew install git
 brew install git-lfs
 brew install imagemagick --with-webp
 brew install lua
 brew install lynx
+brew install mysql
+brew install node
 brew install p7zip
 brew install pigz
 brew install pv
+brew install redis
 brew install rename
-brew install rhino
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install tree

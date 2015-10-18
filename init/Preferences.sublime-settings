@@ -1,13 +1,15 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
-	"default_encoding": "UTF-8",
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/User/Flatland Dark (SL).tmTheme",
+	"create_window_at_startup": false,
 	"default_line_ending": "unix",
-	"detect_indentation": false,
+	"detect_slow_plugins": false,
 	"draw_white_space": "all",
-	"ensure_newline_at_eof_on_save": false,
 	"file_exclude_patterns":
 	[
 		".DS_Store",
+		"*.lib",
+		"*.log",
 		"Desktop.ini",
 		"*.pyc",
 		"._*",
@@ -18,24 +20,39 @@
 	"folder_exclude_patterns":
 	[
 		".git",
-		"node_modules"
+		".bundle",
+		".sass-cache",
+		".svn",
+		".hg",
+		"node_modules",
+		".idea"
 	],
 	"font_face": "Monaco",
-	"font_size": 13,
+	"font_size": 11.0,
+	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage",
+		"Markdown",
+		"SideBarEnhancements"
+	],
 	"line_padding_bottom": 5,
 	"match_brackets": true,
 	"match_brackets_angle": true,
-	"remember_open_files": false,
+	"open_files_in_new_window": false,
 	"rulers":
 	[
-		80
+		80,
+		120
 	],
 	"show_encoding": true,
 	"show_line_endings": true,
+	"save_on_focus_lost": true,
+	"show_full_path": true,
+	"show_minimap": false,
 	"tab_size": 2,
-	"translate_tabs_to_spaces": false,
+	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true
+	"use_simple_full_screen": true
 }

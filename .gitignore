@@ -1,14 +1,58 @@
-# Compiled Python files
-*.pyc
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
 
-# Folder view configuration files
-.DS_Store
-Desktop.ini
+# Sublime Text
+/*.sublime-project
+*.sublime-workspace
 
-# Thumbnail cache files
-._*
+# Netbeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Windows
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# Files that might appear on external disks
+# Eclipse
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.externalToolBuilders/
+*.launch
+.buildpath
+
+# Linux
+*~
+
+# Mac OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
 .Spotlight-V100
 .Trashes
+
+# PHPStorm
+.idea/

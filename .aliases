@@ -7,13 +7,23 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Development"
+alias cl="clear"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
 alias g="git"
 alias h="history"
-alias j="jobs"
+alias hosts='subl /etc/hosts'
+alias ll='ls -lGaf'
+
+alias mongostart='launchctl start homebrew.mxcl.mongodb'
+alias mongostop='launchctl stop homebrew.mxcl.mongodb'
+
+alias redisstart='launchctl start homebrew.mxcl.redis'
+alias redisstop='launchctl stop homebrew.mxcl.redis'
+
+alias mysqlstart='launchctl start homebrew.mxcl.mysql'
+alias mysqlstop='launchctl stop homebrew.mxcl.mysql'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -51,6 +61,9 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew c
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# Enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
