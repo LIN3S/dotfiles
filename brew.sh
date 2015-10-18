@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if ! brew -v &> /dev/null; then
-    echo "Installing brew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    echo "Done!"
+  echo "Installing brew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "Done!"
 fi
 
 # Install command-line tools using Homebrew.
