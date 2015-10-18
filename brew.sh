@@ -62,7 +62,7 @@ brew cask install moom
 brew cask install phpstorm
 brew cask install robomongo
 brew cask install sequel-pro
-brew cask install sublime-text
+brew cask install sublime-text && cp -rf ~/init/SublimeText/* ~/Library/Application\ Support/Sublime\ Text\ 3/
 brew cask install tower
 brew cask install virtualbox
 brew cask install vagrant
