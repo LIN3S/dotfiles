@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if ! brew -v &> /dev/null; then
+    echo "Installing brew..."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo "Done!"
+fi
+
 # Install command-line tools using Homebrew.
 
 # Ask for the administrator password upfront.
@@ -9,7 +15,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Make sure we’re using the latest Homebrew.
-brew update
+brew update && brew doctor
 
 # Upgrade any already-installed formulae.
 brew upgrade --all
@@ -19,8 +25,6 @@ brew upgrade --all
 brew install coreutils
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
-# Install some other useful utilities like `sponge`.
-brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
@@ -41,6 +45,29 @@ brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 brew install homebrew/php/php55 --with-gmp
+
+# Install casks
+brew install caskroom/cask/brew-cask
+brew install Caskroom/cask/java
+
+brew cask install 1password
+brew cask install appcleaner
+brew cask install caffeine
+brew cask install evernote
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install firefox
+brew cask install iterm2
+brew cask install moom
+brew cask install phpstorm
+brew cask install robomongo
+brew cask install sequel-pro
+brew cask install sublime-text
+brew cask install tower
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vagrant-manager
+brew cask install vlc
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -90,9 +117,11 @@ brew install docker
 brew install composer
 brew install git
 brew install git-lfs
+brew install heroku
 brew install imagemagick --with-webp
 brew install lua
 brew install lynx
+brew install mongodb
 brew install mysql
 brew install node
 brew install p7zip
