@@ -50,12 +50,10 @@ brew tap caskroom/versions
 brew install caskroom/cask/brew-cask
 brew install Caskroom/cask/java
 
-brew cask install 1password
 brew cask install appcleaner
-brew cask install caffeine
-brew cask install evernote
 brew cask install google-chrome
 brew cask install google-drive
+brew cask install filezilla
 brew cask install firefox
 brew cask install iterm2
 brew cask install moom
@@ -63,10 +61,10 @@ brew cask install phpstorm
 brew cask install robomongo
 brew cask install sequel-pro
 brew cask install sublime-text3 && cp -rf ~/init/SublimeText/* ~/Library/Application\ Support/Sublime\ Text\ 3/
+brew cask install teamviewer
 brew cask install tower
 brew cask install virtualbox
 brew cask install vagrant
-brew cask install vagrant-manager
 brew cask install vlc
 
 # Install font tools.

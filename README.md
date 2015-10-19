@@ -53,9 +53,15 @@ $ ~/.osx
 ```
 
 ###Install Homebrew formulae
-When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
+When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae:
 ```bash
 $ ~/brew.sh
+```
+
+###NPM packages and Ruby gems
+After that there are some useful packages and gems that are required always so:
+```bash
+$ sh ~/node.sh && sh ~/ruby.sh
 ```
 
 ##Credits
