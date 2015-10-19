@@ -55,7 +55,7 @@ brew cask install google-chrome
 brew cask install google-drive
 brew cask install filezilla
 brew cask install firefox
-brew cask install iterm2
+brew cask install iterm2 && cp ~/init/com.googlecode.iterm2.plist ~/Library/Preferences
 brew cask install moom
 brew cask install phpstorm
 brew cask install robomongo
