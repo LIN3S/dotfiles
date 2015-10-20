@@ -27,10 +27,9 @@ sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
-# Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
-brew install bash
+brew install bash && \
+sudo echo $(brew --prefix)/bin/bash >> /etc/shells && \
+chsh -s $(brew --prefix)/bin/bash
 brew tap homebrew/versions
 brew install bash-completion2
 
@@ -73,37 +72,12 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
-brew install bfg
-brew install binutils
-brew install binwalk
-brew install cifer
-brew install dex2jar
-brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install netpbm
-brew install nmap
-brew install pngcheck
-brew install socat
-brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
-brew install ucspi-tcp # `tcpserver` etc.
-brew install xpdf
-brew install xz
-
 # Install PHP 5.6 with Xdebug.
 brew tap homebrew/dupes
 brew tap homebrew/homebrew-php
 brew install php56
 brew install php56-xdebug
+brew install php56-apcu
 
 # Install other useful binaries.
 brew install ack
