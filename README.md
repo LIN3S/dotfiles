@@ -57,7 +57,7 @@ When setting up a new Mac, you may want to install some common [Homebrew](http:/
 ```bash
 $ ~/brew.sh
 ```
-> PHPStorm settings are available into `init/settings.jar` so you should only import this configurations following these [instructions](https://www.jetbrains.com/phpstorm/help/exporting-and-importing-settings.html).
+> PHPStorm settings are available into `init/PhpStorm/settings.jar` so you should only import this configurations following these [instructions](https://www.jetbrains.com/phpstorm/help/exporting-and-importing-settings.html).
 
 ###NPM packages and Ruby gems
 After that there are some useful packages and gems that are required always so:
