@@ -54,12 +54,14 @@ brew cask install google-chrome
 brew cask install google-drive
 brew cask install filezilla
 brew cask install firefox
-brew cask install iterm2 && cp ~/init/com.googlecode.iterm2.plist ~/Library/Preferences
+brew cask install iterm2 && \
+cp ~/init/com.googlecode.iterm2.plist ~/Library/Preferences
 brew cask install moom
 brew cask install phpstorm
 brew cask install robomongo
 brew cask install sequel-pro
-brew cask install sublime-text3 && cp -rf ~/init/SublimeText/* ~/Library/Application\ Support/Sublime\ Text\ 3/
+brew cask install sublime-text3 && \
+cp -rf ~/init/SublimeText/* ~/Library/Application\ Support/Sublime\ Text\ 3/
 brew cask install teamviewer
 brew cask install tower
 brew cask install virtualbox
