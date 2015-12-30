@@ -3,7 +3,9 @@
 * Xcode
 
 * 1password
+* Google Chrome
 * Caffeine
+* Moom
 * Evernote
 * iPhoto
 * Keynote

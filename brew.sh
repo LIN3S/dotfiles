@@ -33,6 +33,11 @@ chsh -s $(brew --prefix)/bin/bash
 brew tap homebrew/versions
 brew install bash-completion2
 
+if ! grep '/usr/local/bin/bash' /etc/shells; then
+  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+  chsh -s /usr/local/bin/bash;
+fi;
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
@@ -41,7 +46,7 @@ brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
+brew install homebrew/php/php70 --with-gmp
 
 # Install casks
 brew tap caskroom/versions
@@ -50,7 +55,6 @@ brew install caskroom/cask/brew-cask
 brew install Caskroom/cask/java
 
 brew cask install appcleaner
-brew cask install google-chrome
 brew cask install google-drive
 brew cask install filezilla
 brew cask install firefox
@@ -74,12 +78,12 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
-# Install PHP 5.6 with Xdebug.
+# Install PHP 7.0 with Xdebug.
 brew tap homebrew/dupes
 brew tap homebrew/homebrew-php
-brew install php56
-brew install php56-xdebug
-brew install php56-apcu
+brew install php70
+brew install php70-xdebug
+brew install php70-apcu
 
 # Install other useful binaries.
 brew install ack
