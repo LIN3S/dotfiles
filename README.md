@@ -67,7 +67,7 @@ $ exec su - $USER
 ###NPM packages and Ruby gems
 After that there are some useful packages and gems that are required always so:
 ```bash
-$ sh ~/node.sh && sh ~/ruby.sh
+$ sh ~/npm.sh && sh ~/ruby.sh
 ```
 
 ##Credits
