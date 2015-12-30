@@ -29,11 +29,6 @@ Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 $ export PATH="/usr/local/bin:$PATH"
 ```
 
-You should execute the following command to change the iTerm bash binary:
-```bash
-$ exec su - $USER
-```
-
 ###Add custom commands without creating a new fork
 If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
 
@@ -63,6 +58,11 @@ When setting up a new Mac, you may want to install some common [Homebrew](http:/
 $ ~/brew.sh
 ```
 > PHPStorm settings are available into `init/PhpStorm/settings.jar` so you should only import this configurations following these [instructions](https://www.jetbrains.com/phpstorm/help/exporting-and-importing-settings.html).
+
+You should execute the following command to change the iTerm bash binary:
+```bash
+$ exec su - $USER
+```
 
 ###NPM packages and Ruby gems
 After that there are some useful packages and gems that are required always so:

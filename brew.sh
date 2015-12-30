@@ -84,6 +84,7 @@ brew tap homebrew/homebrew-php
 brew install php70
 brew install php70-xdebug
 brew install php70-apcu
+brew install php70-intl
 
 # Install other useful binaries.
 brew install ack
