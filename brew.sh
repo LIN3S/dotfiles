@@ -55,19 +55,15 @@ brew install caskroom/cask/brew-cask
 brew install Caskroom/cask/java
 
 brew cask install appcleaner
-brew cask install google-drive
 brew cask install filezilla
 brew cask install firefox
 brew cask install iterm2 && \
 cp ~/init/Bash/com.googlecode.iterm2.plist ~/Library/Preferences
-brew cask install moom
 brew cask install phpstorm
 brew cask install robomongo
 brew cask install sequel-pro
 brew cask install sublime-text3 && \
 cp -rf ~/init/SublimeText/* ~/Library/Application\ Support/Sublime\ Text\ 3/
-brew cask install teamviewer
-brew cask install tower
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install vlc
@@ -85,11 +81,11 @@ brew install php70
 brew install php70-xdebug
 brew install php70-apcu
 brew install php70-intl
+brew intall php70-imagick
 
 # Install other useful binaries.
 brew install ack
 brew install ansible
-brew install boot2docker
 brew install dark-mode
 brew install docker
 brew install composer
@@ -111,7 +107,10 @@ brew install speedtest_cli
 brew install ssh-copy-id
 brew install tree
 brew install webkit2png
+brew install yarn
 brew install zopfli
+brew install zsh
+brew install zsh-completions
 
 # Remove outdated versions from the cellar.
 brew cleanup
