@@ -52,6 +52,12 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 $ ~/.osx
 ```
 
+###Install Oh My Zsh
+Make the terminal better we neet to install Oh My Zsh:
+```bash
+$ ~/ohmyzsh.sh
+```
+
 ###Install Homebrew formulae
 When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae:
 ```bash
@@ -74,7 +80,7 @@ $ sh ~/npm.sh && sh ~/ruby.sh
 This is an opinated fork of [Mathias Bynens](https://mathiasbynens.be/)'s [dotfiles](https://github.com/mathiasbynens/dotfiles) repository 
 
 Created by **@benatespina** - [benatespina@gmail.com](mailto:benatespina@gmail.com).<br>
-Copyright (c) 2015
+Copyright (c) 2015-present
 
 ##Licensing Options
 [![License](http://img.shields.io/:license-mit-yellowgreen.svg)](https://github.com/benatespina/dotfiles/blob/master/LICENSE)

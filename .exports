@@ -12,7 +12,10 @@ export NODE_REPL_MODE='sloppy';
 export HISTSIZE='32768';
 export HISTFILESIZE="${HISTSIZE}";
 # Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL='ignoreboth';
+# Avoid succesive duplicates or lines starting with space in the bash command history.
+export HISTCONTROL="ignoreboth:erasedups"
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
@@ -26,3 +29,6 @@ export MANPAGER='less -X';
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
+
+# Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"

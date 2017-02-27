@@ -59,7 +59,6 @@ brew cask install filezilla
 brew cask install firefox
 brew cask install iterm2 && \
 cp ~/init/Bash/com.googlecode.iterm2.plist ~/Library/Preferences
-brew cask install phpstorm
 brew cask install robomongo
 brew cask install sequel-pro
 brew cask install sublime-text3 && \
@@ -87,7 +86,6 @@ brew intall php70-imagick
 brew install ack
 brew install ansible
 brew install dark-mode
-brew install docker
 brew install composer
 brew install git
 brew install git-lfs

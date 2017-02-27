@@ -5,10 +5,13 @@
 * 1password
 * Google Chrome
 * Caffeine
-* Moom
+* Magnet
 * Evernote
 * iPhoto
 * Keynote
 * Numbers
 * Pages
 * StuffIt Expander
+* Docker
+* Slack
+* PhpStorm
