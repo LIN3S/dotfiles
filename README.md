@@ -1,10 +1,10 @@
 # My custom dotfiles
 >Custom OS X config based on Mathias Bynens’s dotfiles
 
-##Installation
+## Installation
 **Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
-###Using Git and the bootstrap script
+### Using Git and the bootstrap script
 ```bash
 $ git clone https://github.com/benatespina/dotfiles.git && cd dotfiles
 $ source bootstrap.sh
@@ -14,14 +14,14 @@ To update, `cd` into your local `dotfiles` repository and then:
 $ source bootstrap.sh
 ```
 
-###Git-free install
+### Git-free install
 To install these dotfiles without Git:
 ```bash
 $ cd; curl -#L https://github.com/benatespina/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
 ```
 To update later on, just run that command again.
 
-###Specify the `$PATH`
+### Specify the `$PATH`
 If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mathiasbynens/dotfiles/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
 
 Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
@@ -29,7 +29,7 @@ Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 $ export PATH="/usr/local/bin:$PATH"
 ```
 
-###Add custom commands without creating a new fork
+### Add custom commands without creating a new fork
 If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
 
 My `~/.extra` looks something like this:
@@ -46,19 +46,19 @@ GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 ```
 
-###Sensible OS X defaults
+### Sensible OS X defaults
 When setting up a new Mac, you may want to set some sensible OS X defaults:
 ```bash
 $ ~/.osx
 ```
 
-###Install Oh My Zsh
+### Install Oh My Zsh
 Make the terminal better we neet to install Oh My Zsh:
 ```bash
 $ ~/ohmyzsh.sh
 ```
 
-###Install Homebrew formulae
+### Install Homebrew formulae
 When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae:
 ```bash
 $ ~/brew.sh
@@ -70,17 +70,17 @@ You should execute the following command to change the iTerm bash binary:
 $ exec su - $USER
 ```
 
-###NPM packages and Ruby gems
+### NPM packages and Ruby gems
 After that there are some useful packages and gems that are required always so:
 ```bash
 $ sh ~/npm.sh && sh ~/ruby.sh
 ```
 
-##Credits
+## Credits
 This is an opinated fork of [Mathias Bynens](https://mathiasbynens.be/)'s [dotfiles](https://github.com/mathiasbynens/dotfiles) repository 
 
 Created by **@benatespina** - [benatespina@gmail.com](mailto:benatespina@gmail.com).<br>
 Copyright (c) 2015-present
 
-##Licensing Options
+## Licensing Options
 [![License](http://img.shields.io/:license-mit-yellowgreen.svg)](https://github.com/benatespina/dotfiles/blob/master/LICENSE)
