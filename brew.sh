@@ -64,8 +64,6 @@ brew cask install sequel-pro
 brew cask install sublime-text3 && \
 cp -rf ~/init/SublimeText/* ~/Library/Application\ Support/Sublime\ Text\ 3/
 brew cask install virtualbox
-brew cask install vagrant
-brew cask install vlc
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -73,14 +71,34 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
-# Install PHP 7.0 with Xdebug.
+# Install PHP 7.0 and its common drivers.
 brew tap homebrew/dupes
 brew tap homebrew/homebrew-php
+
+brew install php56
+brew install php56-apcu
+brew install php56-imagick
+brew install php56-intl
+brew install php56-mcrypt
+brew install php56-xdebug
+
+brew unlink php56
+
 brew install php70
-brew install php70-xdebug
 brew install php70-apcu
+brew install php70-imagick
 brew install php70-intl
-brew intall php70-imagick
+brew install php70-mcrypt
+brew install php70-xdebug
+
+brew unlink php70
+
+brew install php71
+brew install php71-apcu
+brew install php71-imagick
+brew install php71-intl
+brew install php71-mcrypt
+brew install php71-xdebug
 
 # Install other useful binaries.
 brew install ack
