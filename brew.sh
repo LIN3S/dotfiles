@@ -25,12 +25,12 @@ sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
+
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 brew install bash && \
 sudo echo $(brew --prefix)/bin/bash >> /etc/shells && \
 chsh -s $(brew --prefix)/bin/bash
-brew tap homebrew/versions
 brew install bash-completion2
 
 if ! grep '/usr/local/bin/bash' /etc/shells; then
@@ -43,62 +43,47 @@ brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
-brew install homebrew/php/php70 --with-gmp
 
 # Install casks
 brew tap caskroom/versions
 
-brew install caskroom/cask/brew-cask
 brew install Caskroom/cask/java
 
-brew cask install appcleaner
 brew cask install filezilla
 brew cask install firefox
-brew cask install iterm2 && \
-cp ~/init/Bash/com.googlecode.iterm2.plist ~/Library/Preferences
-brew cask install robomongo
+brew cask install google-chrome
 brew cask install sequel-pro
-brew cask install sublime-text3 && \
-cp -rf ~/init/SublimeText/* ~/Library/Application\ Support/Sublime\ Text\ 3/
-brew cask install virtualbox
+brew cask install slack
+brew cask install jetbrains-toolbox
+brew cask install appcleaner
+brew cask install daisydisk
+brew cask install spectacle
+brew cask install spotify
+brew cask install iterm2
+brew cask install sublime-text3 && cp -rf ~/init/SublimeText/* ~/Library/Application\ Support/Sublime\ Text\ 3/
+
+# https://gist.github.com/DragonBe/0faebe58deced34744953e3bf6afbec7
+sudo apachectl stop
+sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null
+
+brew install httpd24 --with-privileged-ports --with-http2
+brew install php@5.6
+brew install php@7.0
+brew install php@7.1
+brew install php@7.2
+brew install mariadb 
+brew install node@8
+brew install redis
+brew install yarn
+brew install composer
+brew install git
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install font tools.
 brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
-
-# Install PHP 7.0 and its common drivers.
-brew tap homebrew/dupes
-brew tap homebrew/homebrew-php
-
-brew install php56
-brew install php56-apcu
-brew install php56-imagick
-brew install php56-intl
-brew install php56-mcrypt
-brew install php56-xdebug
-
-brew unlink php56
-
-brew install php70
-brew install php70-apcu
-brew install php70-imagick
-brew install php70-intl
-brew install php70-mcrypt
-brew install php70-xdebug
-
-brew unlink php70
-
-brew install php71
-brew install php71-apcu
-brew install php71-imagick
-brew install php71-intl
-brew install php71-mcrypt
-brew install php71-xdebug
 
 # Install other useful binaries.
 brew install ack
@@ -107,7 +92,6 @@ brew install dark-mode
 brew install composer
 brew install git
 brew install git-lfs
-brew install heroku
 brew install imagemagick --with-webp
 brew install lua
 brew install lynx
@@ -128,5 +112,18 @@ brew install zopfli
 brew install zsh
 brew install zsh-completions
 
+# Añadir .gitignore .global
+touch ~/.gitignore
+git config --global core.excludesfile ~/.gitignore
+
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Install PHP Switcher
+curl -L https://gist.githubusercontent.com/rhukster/f4c04f1bf59e0b74e335ee5d186a98e2/raw > /usr/local/bin/sphp
+chmod +x /usr/local/bin/sphp
+
+# Install PHP dependencies
+pecl install xdebug
+pecl install imagick
+
