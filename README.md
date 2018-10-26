@@ -4,22 +4,14 @@
 ## Installation
 **Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
-### Using Git and the bootstrap script
-```bash
-$ git clone https://github.com/benatespina/dotfiles.git && cd dotfiles
-$ source bootstrap.sh
-```
-To update, `cd` into your local `dotfiles` repository and then:
 ```bash
 $ source bootstrap.sh
 ```
 
-### Git-free install
-To install these dotfiles without Git:
+To update, `cd` into your local `dotfiles` repository and then:
 ```bash
-$ cd; curl -#L https://github.com/benatespina/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
+$ source bootstrap.sh
 ```
-To update later on, just run that command again.
 
 ### Specify the `$PATH`
 If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mathiasbynens/dotfiles/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
@@ -37,8 +29,8 @@ My `~/.extra` looks something like this:
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
 
-GIT_AUTHOR_NAME="benatespina"
-GIT_AUTHOR_EMAIL="benatespina@gmail.com"
+GIT_AUTHOR_NAME="example"
+GIT_AUTHOR_EMAIL="example@lin3s.com"
 
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 git config --global user.name "$GIT_AUTHOR_NAME"
@@ -77,10 +69,6 @@ $ sh ~/npm.sh && sh ~/ruby.sh
 ```
 
 ## Credits
-This is an opinated fork of [Mathias Bynens](https://mathiasbynens.be/)'s [dotfiles](https://github.com/mathiasbynens/dotfiles) repository 
+This is an opinated fork of [Mathias Bynens](https://mathiasbynens.be/)'s [dotfiles](https://github.com/mathiasbynens/dotfiles) repository
 
-Created by **@benatespina** - [benatespina@gmail.com](mailto:benatespina@gmail.com).<br>
-Copyright (c) 2015-present
-
-## Licensing Options
-[![License](http://img.shields.io/:license-mit-yellowgreen.svg)](https://github.com/benatespina/dotfiles/blob/master/LICENSE)
+Modified by **@benatespina** - [benatespina/dotfiles](https://github.com/benatespina/dotfiles).<br>
